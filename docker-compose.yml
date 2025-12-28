@@ -1,0 +1,16 @@
+#version: "3.9"  # optional since v1.27.0
+
+services:
+  fluidplayer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fluidplayer
+    ports:
+      - "8080:80"
+    volumes:
+      - fluid-player-volume:/usr/share/nginx/html
+    restart: unless-stopped
+
+volumes:
+  fluid-player-volume: {}
