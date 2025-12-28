@@ -7,26 +7,22 @@
     <!-- Fluid Player CDN -->
     <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
     <link href="video_player.css" rel="stylesheet" />
+    
+    
 </head>
 <body>
-    <!-- <video id="video-id" width="640" height="360" controls> -->
+    <h1>Fluid player </h1>
     <video id="video-id" controls preload="metadata">
         <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-
-    <script>
-        // Initialize Fluid Player
-        fluidPlayer("video-id", {
-            layoutControls: {
-                controlBar: {
-                    autoHide: true
-                }
-            }
-        });
-    </script>
-
-</body>
-
+    
+    <div class="controls">
+        <button id="btn-play">▶ Play</button>
+        <button id="btn-pause">⏸ Pause</button>
+        <button id="btn-skip">⏩ +10s</button>
+        <button id="btn-fullscreen">⛶ Fullscreen</button>
+    </div>
+    <script src="player.js"></script>
 </body>
 </html>
